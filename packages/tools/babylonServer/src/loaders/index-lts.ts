@@ -86,6 +86,8 @@ export { GLTF2 };
 /* eslint-disable import/no-internal-modules */
 import * as OBJLoaders from "../../../../dev/loaders/src/OBJ/index";
 
+import * as FBXLoaders from "../../../../dev/loaders/src/FBX/index";
+
 /**
  * This is the entry point for the UMD module.
  * The entry point for a future ESM package should be index.ts
@@ -95,8 +97,15 @@ if (typeof globalObject !== "undefined") {
         (<any>globalObject).BABYLON[key] = (<any>OBJLoaders)[key];
     }
 }
+if (typeof globalObject !== "undefined") {
+    for (const key in FBXLoaders) {
+        (<any>globalObject).BABYLON[key] = (<any>FBXLoaders)[key];
+    }
+}
 
 export * from "../../../../dev/loaders/src/OBJ/index";
+
+export * from "../../../../dev/loaders/src/FBX/index";
 
 /* eslint-disable import/no-internal-modules */
 import * as Loaders from "../../../../dev/loaders/src/STL/index";

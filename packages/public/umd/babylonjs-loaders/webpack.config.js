@@ -12,6 +12,7 @@ module.exports = (env) => {
             glTFFileLoader: "./src/glTFFileLoader.ts",
             objFileLoader: "./src/objFileLoader.ts",
             stlFileLoader: "./src/stlFileLoader.ts",
+            fbxFileLoader: "./src/fbxFileLoader.ts",
         },
         overrideFilename: (pathData) => {
             return pathData.chunk.name === "loaders" ? `babylonjs.[name]${env.production ? ".min" : ""}.js` : `babylon.[name]${env.production ? ".min" : ""}.js`;

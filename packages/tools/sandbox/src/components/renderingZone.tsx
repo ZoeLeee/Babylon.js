@@ -5,6 +5,7 @@ import { Engine } from "core/Engines/engine";
 import { WebGPUEngine } from "core/Engines/webgpuEngine";
 import { SceneLoader } from "core/Loading/sceneLoader";
 import { GLTFFileLoader } from "loaders/glTF/glTFFileLoader";
+import "loaders/FBX";
 import { Scene } from "core/scene";
 import type { Vector3 } from "core/Maths/math.vector";
 import type { ArcRotateCamera } from "core/Cameras/arcRotateCamera";
@@ -382,6 +383,7 @@ export class RenderingZone extends React.Component<IRenderingZoneProps> {
         GLTFFileLoader.IncrementalLoading = false;
         this.props.globalState.glTFLoaderExtensions = {};
         SceneLoader.OnPluginActivatedObservable.add((plugin) => {
+            console.log('plugin: ', plugin);
             this._currentPluginName = plugin.name;
             if (this._currentPluginName === "gltf") {
                 const loader = plugin as GLTFFileLoader;

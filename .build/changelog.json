@@ -496,6 +496,7 @@
                     "packages/tools/babylonServer/src/loaders/legacy-glTF2FileLoader.ts",
                     "packages/tools/babylonServer/src/loaders/legacy-glTFFileLoader.ts",
                     "packages/tools/babylonServer/src/loaders/legacy-objFileLoader.ts",
+                    "packages/tools/babylonServer/src/loaders/legacy-fbxFileLoader.ts",
                     "packages/tools/babylonServer/src/loaders/legacy-stlFileLoader.ts",
                     "packages/tools/babylonServer/src/materials/index-dev.ts",
                     "packages/tools/babylonServer/src/materials/index-lts.ts",
